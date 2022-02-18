@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "QuantityField",
-  data() {
+  data: function () {
     return {
       quantity: 0,
     };

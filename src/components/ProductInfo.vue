@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import data from "../data.json";
+import * as json from '../data.json';
 import Button from "../common/Button.vue";
 import ProductTable from "../common/ProductTable.vue";
 
 export default {
   name: "ProductInfo",
-  data() {
+  data: function () {
     return {
-      title: data.storefrontBySlug.listing.translation.title
+      title: json.default.data.storefrontBySlug.listing.translation.title
     };
   },
   components: {
