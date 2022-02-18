@@ -1,5 +1,8 @@
 <template>
   <div>
+      <p>Bobbi Ravioli (100 euro min)</p>
+      <h1>Dress Isabel</h1>
+      <p>20% discount</p>
     <ProductTable></ProductTable>
     <Button type="btn-text" class="block">add to cart</Button>
     <Button type="btn-icon" class="block">
@@ -17,7 +20,7 @@ export default {
   name: "ProductInfo",
   components: {
       Button,
-      ProductTable
+      ProductTable,
   }
 };
 </script>
