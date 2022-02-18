@@ -31,8 +31,11 @@ export default {
   name: "Swiper",
   data: function () {
     return {
-      images: ["https://cdn.pixabay.com/photo/2019/07/30/18/26/surface-4373559_1280.jpg", "https://cdn.pixabay.com/photo/2018/04/22/12/27/butterfly-3340921_1280.png", "https://cdn.pixabay.com/photo/2017/01/27/16/36/love-2013497_1280.png"],
+     
     };
+  },
+  props:{
+      images: Array
   },
   mounted() {
     new Swiper(".swiper-container", {

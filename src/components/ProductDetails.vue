@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper></swiper>
+    <swiper :images="images"></swiper>
     <product-description>
       <template v-slot:desc-title></template>
       <template v-slot:desc>{{description}}</template>
@@ -9,23 +9,32 @@
 </template>
 
 <script>
-import * as json from '../data.json';
+import * as json from "../data.json";
 import Swiper from "../common/Swiper.vue";
 import ProductDescription from "../common/ProductDescription.vue";
 
 export default {
   name: "ProductDetails",
-  data() {
-    return {
-      description: json.default.data.storefrontBySlug.listing.description,
-    };
-  },
   components: {
     Swiper,
     ProductDescription,
   },
+  data() {
+    return {
+      data: json.default.data.storefrontBySlug,
+      description: json.default.data.storefrontBySlug.listing.description,
+    };
+  },
+  computed: {
+    images: function () {
+      return this.data.listing.images.edges.map((eachImageInfo) => {
+        return eachImageInfo.node.modal;
+      });
+    },
+  },
+
   mounted() {
-      console.log('descr',this.data);
-  }
+    // console.log("descr", this.images);
+  },
 };
 </script>
