@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="product--details--wrapper">
     <swiper :images="images"></swiper>
     <product-description>
       <template v-slot:desc-title></template>
@@ -31,10 +31,6 @@ export default {
         return eachImageInfo.node.modal;
       });
     },
-  },
-
-  mounted() {
-    // console.log("descr", this.images);
   },
 };
 </script>

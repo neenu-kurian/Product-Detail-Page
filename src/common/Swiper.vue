@@ -22,20 +22,18 @@
 
 <script>
 import Swiper, { Navigation } from "swiper";
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 Swiper.use([Navigation]);
 
 export default {
   name: "Swiper",
   data: function () {
-    return {
-     
-    };
+    return {};
   },
-  props:{
-      images: Array
+  props: {
+    images: Array,
   },
   mounted() {
     new Swiper(".swiper-container", {

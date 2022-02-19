@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="flex">
+    <div class="flex pdp--page">
       <product-details class="flex-item"></product-details>
       <product-info class="flex-item"></product-info>
     </div>
@@ -20,6 +20,12 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/main.scss";
+ body {
+   font-family: 'Roboto', sans-serif;
+ }
+
+ .pdp--page {
+   margin-top: 30px;
+ }
 </style>
 
