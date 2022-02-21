@@ -1,14 +1,11 @@
 <template>
   <div class="swiper-container">
-    <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div v-for="(image, index) in this.images" :key="index" class="swiper-slide">
+      <div v-for="(image, index) in images" :key="index" class="swiper-slide">
         <img :src="image" alt="product-image" class="swiper-image" />
       </div>
     </div>
-
-    <!-- If we need navigation buttons -->
     <div
       class="swiper-button-prev"
       v-bind:style="{ 'background-image': 'url(' + '/src/assets/images/icon-arrow-left.svg' + ')' }"
@@ -22,6 +19,7 @@
 
 <script>
 import Swiper, { Navigation } from "swiper";
+import { mapGetters } from 'vuex';
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
@@ -32,8 +30,8 @@ export default {
   data: function () {
     return {};
   },
-  props: {
-    images: Array,
+  computed: {
+    ...mapGetters(['images'])
   },
   mounted() {
     new Swiper(".swiper-container", {

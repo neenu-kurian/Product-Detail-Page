@@ -1,6 +1,6 @@
 <template>
-  <div class="product--details--wrapper">
-    <swiper :images="images"></swiper>
+  <div class="product--details--wrapper" v-if="!loading">
+    <swiper></swiper>
     <product-description>
       <template v-slot:desc-title></template>
       <template v-slot:desc>{{description}}</template>
@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import * as json from "../data.json";
 import Swiper from "../common/Swiper.vue";
 import ProductDescription from "../common/ProductDescription.vue";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "ProductDetails",
@@ -19,18 +19,9 @@ export default {
     Swiper,
     ProductDescription,
   },
-  data() {
-    return {
-      data: json.default.data.storefrontBySlug,
-      description: json.default.data.storefrontBySlug.listing.description,
-    };
-  },
   computed: {
-    images: function () {
-      return this.data.listing.images.edges.map((eachImageInfo) => {
-        return eachImageInfo.node.modal;
-      });
-    },
+    ...mapState(["loading"]),
+    ...mapGetters(["description"]),
   },
 };
 </script>

@@ -12,6 +12,6 @@ export default {
   name: "Button",
   props: {
     type: String,
-  }
+  },
 };
 </script>
