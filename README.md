@@ -1,4 +1,4 @@
-# orderchamp-product-detail
+# product-detail-page
 ![image](https://user-images.githubusercontent.com/36845478/154897849-0c48b423-d12c-4e06-a4e5-748c8bf4b549.png)
 
 
