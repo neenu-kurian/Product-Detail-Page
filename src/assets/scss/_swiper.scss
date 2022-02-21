@@ -1,0 +1,14 @@
+.swiper-image {
+  width: 70%;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    font-size: 20px;
+  }
+}

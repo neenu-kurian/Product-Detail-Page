@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="28px" viewBox="0 0 17 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <g id="TM_Configurator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D_Configurator_EnterDetails" transform="translate(-130.000000, -452.000000)" fill="#1D262B">
+            <g id="Group-25" transform="translate(78.000000, 131.000000)">
+                <g id="Group-9" transform="translate(52.000000, 321.000000)">
+                    <path d="M21.8238442,6.17615577 C22.7253853,7.07769679 22.7253853,8.53938359 21.8238442,9.44092461 L8.76476885,22.5 L8.5,22.235 L8.23523115,22.5 L-4.82384423,9.44092461 C-5.72538526,8.53938359 -5.72538526,7.07769679 -4.82384423,6.17615577 C-3.92230321,5.27461474 -2.46061641,5.27461474 -1.55907539,6.17615577 L8.5,16.235 L18.5590754,6.17615577 C19.4606164,5.27461474 20.9223032,5.27461474 21.8238442,6.17615577 Z" id="Combined-Shape" transform="translate(8.500000, 14.000000) rotate(-270.000000) translate(-8.500000, -14.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

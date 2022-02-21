@@ -1,0 +1,23 @@
+.product--info--wrapper {
+    &.flex-item {
+        padding: 20px 40px;
+    }
+    .product--brand {
+        margin: 5px 0;
+        color: grey;
+    }
+    .product--title {
+        margin: 10px 0;
+        text-transform: capitalize;
+    }
+    .discount--text {
+        color: lightcoral;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      display: none;
+    }
+
+
+}

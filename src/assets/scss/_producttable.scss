@@ -1,0 +1,20 @@
+.product--table {
+    margin: 40px 0;
+    th,td {
+        border-bottom: 1px solid lightgrey;
+        padding: 8px 20px;
+        text-align: left;
+    }
+    td {
+        font-size: 15px;
+    }
+    .fa-check {
+        color: green;
+    }
+}
+
+.product--table-empty {
+    color: grey;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
