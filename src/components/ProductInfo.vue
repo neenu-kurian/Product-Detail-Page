@@ -4,8 +4,8 @@
     <rating></rating>
     <h1 class="product--title">{{title}}</h1>
     <p class="discount--text">20% discount</p>
-    <ProductTable @total="showTotal"></ProductTable>
-    <Button type="btn--text" class="block">add to cart {{total}}(EUR)</Button>
+    <ProductTable></ProductTable>
+    <Button type="btn--text" class="block">add to cart</Button>
     <Button type="btn--icon" class="block">
       <i class="fa fa-heart-o" aria-hidden="true"></i> add to favorites
     </Button>
@@ -21,24 +21,15 @@ import { mapState, mapGetters } from "vuex";
 
 export default {
   name: "ProductInfo",
-  data: function () {
-    return {
-      total: 0,
-    };
-  },
+
   computed: {
-    ...mapState(["loading"]),
+    ...mapState(["loading", "total"]),
     ...mapGetters(["title"]),
   },
   components: {
     Button,
     ProductTable,
     Rating,
-  },
-  methods: {
-    showTotal(value) {
-      this.total = value;
-    },
   },
 };
 </script>

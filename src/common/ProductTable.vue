@@ -36,6 +36,9 @@
             <i class="fa fa-check" aria-hidden="true"></i>
           </td>
         </tr>
+        <tr>
+          <td colspan="5">TOTAL: € {{total}}</td>
+        </tr>
       </template>
       <template v-else>
         <tr>No data available</tr>
@@ -56,6 +59,13 @@ export default {
   },
   computed: {
     ...mapGetters(["noOfVariants", "tableData", "stock"]),
+    total: function () {
+      return this.quantity.reduce(
+        (total, eachItem, index) =>
+          total + eachItem * this.tableData[index].node.price,
+        0
+      );
+    },
   },
   mounted: function () {
     this.setQuantity();
@@ -63,23 +73,16 @@ export default {
   methods: {
     changeCounter: function (num, index) {
       let oldValue = this.quantity[index];
-      let newValue = oldValue + num;
+      let newValue = parseInt(oldValue) + num;
       if (newValue < 0) {
         newValue = 0;
       }
       this.$set(this.quantity, index, newValue);
-      this.computeTotal();
     },
     setQuantity: function () {
       for (let index = 0; index < this.noOfVariants; index++) {
         this.$set(this.quantity, index, 0);
       }
-    },
-    computeTotal() {
-      const totalPrice = this.quantity.reduce((total, eachItem,index) => 
-         total + eachItem * this.tableData[index].node.price,0
-      );
-      this.$emit("total", totalPrice);
     },
   },
 };

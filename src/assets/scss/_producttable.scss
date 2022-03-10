@@ -11,6 +11,12 @@
     .fa-check {
         color: green;
     }
+    tr:last-child {
+        td {
+            text-align: right;
+            padding: 20px;
+        }
+    }
 }
 
 .product--table-empty {
