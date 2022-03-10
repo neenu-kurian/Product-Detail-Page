@@ -1,4 +1,4 @@
-# orderchamp-product-detail
+# product-detail
 
 ## Project setup
 ```

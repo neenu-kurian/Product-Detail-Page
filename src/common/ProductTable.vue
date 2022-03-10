@@ -62,8 +62,8 @@ export default {
   },
   methods: {
     changeCounter: function (num, index) {
-      var oldValue = this.quantity[index];
-      var newValue = oldValue + num;
+      let oldValue = this.quantity[index];
+      let newValue = oldValue + num;
       if (newValue < 0) {
         newValue = 0;
       }
@@ -76,11 +76,10 @@ export default {
       }
     },
     computeTotal() {
-      var total = 0;
-      this.quantity.forEach((eachItem, index) => {
-        total = total + eachItem * this.tableData[index].node.price;
-      });
-      this.$emit("total", total);
+      const totalPrice = this.quantity.reduce((total, eachItem,index) => 
+         total + eachItem * this.tableData[index].node.price,0
+      );
+      this.$emit("total", totalPrice);
     },
   },
 };
