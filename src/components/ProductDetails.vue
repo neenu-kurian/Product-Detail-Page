@@ -23,5 +23,6 @@ export default {
     ...mapState(["loading"]),
     ...mapGetters(["description"]),
   },
+  //mounted((
 };
 </script>
